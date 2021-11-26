@@ -1,0 +1,15 @@
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\Database.csproj.AssemblyReference.cache
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\App.g.i.cs
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\App.g.cs
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\MainPage.g.cs
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\Pages\NoteForm.g.i.cs
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\Pages\NoteForm.g.cs
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\App.xaml
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\MainPage.xaml
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\Pages\NoteForm.xaml
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\App.xbf
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\MainPage.xbf
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\Pages\NoteForm.xbf
+C:\Users\Ha Nhat\source\repos\Database\Database\obj\x86\Debug\XamlSaveStateFile.xml
