@@ -12,7 +12,7 @@ namespace Database.Data
 {
     public class DatabaseMigration
     {
-        private static string _databaseFile = "contact.db";
+        private static string _databaseFile = "notes.db";
         public static string _databasePath;
         private static string _createNoteTable = "CREATE TABLE IF NOT EXISTS notes " +
             "(Name NVARCHAR(100) NOT NULL," +

@@ -11,7 +11,7 @@ namespace Database.Model
 {
     public class ContactModel
     {
-        private static string _selectStatementWithConditionTemplate = "SELECT * FROM contacts WHERE Name like @keyword";
+        private static string _selectStatementWithConditionTemplate = "SELECT * FROM notes WHERE Name like @keyword";
         public ContactModel()
         {
             DatabaseMigration.UpdateDatabase();
@@ -78,18 +78,24 @@ namespace Database.Model
                     cnn.Open();
                     //Tạo câu lệnh
                     SqliteCommand cmd = new SqliteCommand(_selectStatementWithConditionTemplate, cnn);
+
                     cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
                     //Bắn lệnh vào và lấy dữ liệu.
                     var reader = cmd.ExecuteReader();
                     while (reader.Read())
-                    {                       
+                    {
+                        var phoneNumber = Convert.ToString(reader["PhoneNumber"]);
                         var name = Convert.ToString(reader["Name"]);
                         var contact = new Contact()
-                        {                            
-                            Name = name,                            
+                        {
+                            PhoneNumber = phoneNumber,
+                            Name = name
                         };
-
                         contacts.Add(contact);
+                    }
+                    if (contacts == null)
+                    {
+                        Console.WriteLine("nono");
                     }
                 }
             }
@@ -99,6 +105,5 @@ namespace Database.Model
             }
             return contacts;
         }
-
     }
 }

@@ -42,7 +42,7 @@ namespace Database.Pages
 
         private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(Pages.SeachForm));
+            this.Frame.Navigate(typeof(Pages.SeachForm));
         }
     }
 }

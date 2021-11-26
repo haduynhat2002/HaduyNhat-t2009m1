@@ -11,8 +11,10 @@
     <Grid>
         <Custom:DataGrid x:ConnectionId='2' x:Name="DataGirdNotes" Margin="10,10,10,0" AutoGenerateColumns="true"/>
         <ListView x:ConnectionId='3' x:Name="MyListView"></ListView>
-        <HyperlinkButton x:ConnectionId='4' Content="Add Contact"                                Margin="0 20 0 0"/>
-        <HyperlinkButton x:ConnectionId='5' Content="Search Contact"                                  Margin="0 20 0 0"/>
+        <StackPanel Orientation="Horizontal">
+            <HyperlinkButton x:ConnectionId='4' Content="Add Contact"                                Margin="0 20 20 0"/>
+            <HyperlinkButton x:ConnectionId='5' Content="Search Contact"                                  Margin="0 20 0 0"/>
+        </StackPanel>
     </Grid>
     
 
