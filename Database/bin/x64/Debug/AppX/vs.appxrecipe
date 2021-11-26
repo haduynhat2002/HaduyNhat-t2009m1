@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T03:15:49.885</Modified>
+      <Modified>2021-11-26T04:22:13.546</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\Database.exe">
       <PackagePath>entrypoint\Database.exe</PackagePath>
-      <Modified>2021-11-26T03:15:43.498</Modified>
+      <Modified>2021-11-26T04:22:07.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\.nuget\packages\azure.core\1.6.0\lib\netstandard2.0\Azure.Core.dll">
       <PackagePath>Azure.Core.dll</PackagePath>
@@ -326,23 +326,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\Database.xr.xml">
       <PackagePath>Database.xr.xml</PackagePath>
-      <Modified>2021-11-26T02:41:43.456</Modified>
+      <Modified>2021-11-26T04:13:04.283</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-26T03:15:42.717</Modified>
+      <Modified>2021-11-26T04:22:07.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-11-26T03:15:42.717</Modified>
+      <Modified>2021-11-26T04:22:07.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\Pages\NoteForm.xbf">
       <PackagePath>Pages\NoteForm.xbf</PackagePath>
-      <Modified>2021-11-26T03:15:42.718</Modified>
+      <Modified>2021-11-26T04:22:07.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\Pages\NoteList.xbf">
       <PackagePath>Pages\NoteList.xbf</PackagePath>
-      <Modified>2021-11-26T03:15:42.718</Modified>
+      <Modified>2021-11-26T04:22:07.357</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\Pages\SeachForm.xbf">
+      <PackagePath>Pages\SeachForm.xbf</PackagePath>
+      <Modified>2021-11-26T04:22:07.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -354,11 +358,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-26T03:04:03.897</Modified>
+      <Modified>2021-11-26T04:22:10.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\source\repos\Database\Database\bin\x64\Debug\Core\Database.exe">
       <PackagePath>Database.exe</PackagePath>
-      <Modified>2021-11-26T03:15:49.879</Modified>
+      <Modified>2021-11-26T04:22:13.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ha Nhat\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

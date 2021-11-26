@@ -32,12 +32,12 @@ namespace Database.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var note = new Note()
+            var contact = new Contact()
             {              
                 Name = txtName.Text,
                 PhoneNumber = txtPhoneNumber.Text,                
             };
-            var result = noteModel.Save(note);
+            var result = noteModel.Save(contact);
             if (result)
             {
                 ContentDialog contentDialog = new ContentDialog();

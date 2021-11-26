@@ -21,28 +21,30 @@ namespace Database.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NoteList : Page
+    public sealed partial class SeachForm : Page
     {
-        private ContactModel noteModel = new ContactModel();
-        public NoteList()
+        private ContactModel contactModel = new ContactModel();
+        public SeachForm()
         {
             this.InitializeComponent();
-            this.Loaded += NoteList_Loaded;
+            this.Loaded += SearchContact_Loaded;
         }
-        private void NoteList_Loaded(object sender, RoutedEventArgs e)
+
+        private void SearchContact_Loaded(object sender, RoutedEventArgs e)
         {
-            var note = noteModel.FindAll();
-            DataGirdNotes.ItemsSource = note;
+            MyListView.ItemsSource = contactModel.FindAll();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var result = contactModel.SearchByKeyword(txtName.Text);
+
+            MyListView.ItemsSource = result;
         }
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Pages.NoteForm));
-        }
-
-        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
-        {
-            //this.Frame.Navigate(typeof(Pages.SeachForm));
         }
     }
 }

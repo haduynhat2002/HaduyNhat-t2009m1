@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace Database.Model
 {
-    public class NoteModel
+    public class ContactModel
     {
-        public NoteModel()
+        private static string _selectStatementWithConditionTemplate = "SELECT * FROM contacts WHERE PhoneNumber like @keyword";
+        public ContactModel()
         {
             DatabaseMigration.UpdateDatabase();
         }
-        public bool Save(Note note)
+        public bool Save(Contact contact)
         {
             try
             {
@@ -23,9 +24,9 @@ namespace Database.Model
                 {
                     cnn.Open();
                     SqliteCommand command = new SqliteCommand("INSERT INTO notes (Name, PhoneNumber)" +
-                " values (@name, @phoneNumber)", cnn);                    
-                    command.Parameters.AddWithValue("@name", note.Name);                                       
-                    command.Parameters.AddWithValue("@phoneNumber", note.PhoneNumber);                                       
+                " values (@name, @phoneNumber)", cnn);
+                    command.Parameters.AddWithValue("@name", contact.Name);
+                    command.Parameters.AddWithValue("@phoneNumber", contact.PhoneNumber);
                     command.ExecuteNonQuery();
                     return true;
                 }
@@ -37,9 +38,9 @@ namespace Database.Model
 
         }
 
-        public List<Note> FindAll()
+        public List<Contact> FindAll()
         {
-            List<Note> result = new List<Note>();
+            List<Contact> result = new List<Contact>();
             try
             {
                 // mo ket noi den data base
@@ -51,13 +52,13 @@ namespace Database.Model
                     while (reader.Read())
                     {
                         var name = reader.GetString(0);
-                        var phoneNumber = reader.GetString(1);                      
-                        var note = new Note()
+                        var phoneNumber = reader.GetString(1);
+                        var contact = new Contact()
                         {
                             Name = name,
-                            PhoneNumber = phoneNumber,                          
+                            PhoneNumber = phoneNumber,
                         };
-                        result.Add(note);
+                        result.Add(contact);
                     }
                 }
             }
@@ -65,6 +66,40 @@ namespace Database.Model
             {
             }
             return result;
+        }
+        public List<Contact> SearchByKeyword(string keyword)
+        {
+            List<Contact> contacts = new List<Contact>();
+            try
+            {
+                //
+                using (SqliteConnection cnn = new SqliteConnection($"Filename={DatabaseMigration._databasePath}"))
+                {
+                    cnn.Open();
+                    //Tạo câu lệnh
+                    SqliteCommand cmd = new SqliteCommand(_selectStatementWithConditionTemplate, cnn);
+                    cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                    //Bắn lệnh vào và lấy dữ liệu.
+                    var reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var phoneNumber = Convert.ToString(reader["PhoneNumber"]);
+                        var name = Convert.ToString(reader["Name"]);
+                        var contact = new Contact()
+                        {
+                            PhoneNumber = phoneNumber,
+                            Name = name,                            
+                        };
+
+                        contacts.Add(contact);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return contacts;
         }
 
     }

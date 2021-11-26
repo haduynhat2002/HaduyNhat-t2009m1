@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Database.Entities
 {
-    public class Note
+    public class Contact
     {
         public string Name { get; set; }
         public string PhoneNumber { get; set; }             

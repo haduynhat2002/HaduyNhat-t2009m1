@@ -120,16 +120,19 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\DatabaseMigration.cs" />
-    <Compile Include="Entities\Note.cs" />
+    <Compile Include="Entities\Contact.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\NoteModel.cs" />
+    <Compile Include="Model\ContactModel.cs" />
     <Compile Include="Pages\NoteForm.xaml.cs">
       <DependentUpon>NoteForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NoteList.xaml.cs">
       <DependentUpon>NoteList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SeachForm.xaml.cs">
+      <DependentUpon>SeachForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -162,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\NoteList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SeachForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
