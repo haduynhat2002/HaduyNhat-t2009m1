@@ -11,7 +11,7 @@ namespace Database.Model
 {
     public class ContactModel
     {
-        private static string _selectStatementWithConditionTemplate = "SELECT * FROM contacts WHERE PhoneNumber like @keyword";
+        private static string _selectStatementWithConditionTemplate = "SELECT * FROM contacts WHERE Name like @keyword";
         public ContactModel()
         {
             DatabaseMigration.UpdateDatabase();
@@ -82,12 +82,10 @@ namespace Database.Model
                     //Bắn lệnh vào và lấy dữ liệu.
                     var reader = cmd.ExecuteReader();
                     while (reader.Read())
-                    {
-                        var phoneNumber = Convert.ToString(reader["PhoneNumber"]);
+                    {                       
                         var name = Convert.ToString(reader["Name"]);
                         var contact = new Contact()
-                        {
-                            PhoneNumber = phoneNumber,
+                        {                            
                             Name = name,                            
                         };
 

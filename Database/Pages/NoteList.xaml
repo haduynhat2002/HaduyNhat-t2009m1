@@ -12,7 +12,7 @@
         <Custom:DataGrid x:Name="DataGirdNotes" Margin="10,10,10,0" AutoGenerateColumns="true"/>
         <ListView x:Name="MyListView"></ListView>
         <HyperlinkButton Content="Add Contact" Click="HyperlinkButton_Click"  Margin="0 20 0 0"/>
-        <HyperlinkButton Content="Add Contact" Click="HyperlinkButton_Click_1"  Margin="0 20 0 0"/>
+        <HyperlinkButton Content="Search Contact" Click="HyperlinkButton_Click_1"  Margin="0 20 0 0"/>
     </Grid>
     
 
